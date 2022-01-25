@@ -1,5 +1,19 @@
-import React from 'react';
 import './header.css';
+
+import React from 'react';
+
+
+window.addEventListener("scroll", function() {
+  var header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 0);
+});
+
+function toggleMenu() {
+  const menuToggle = document.querySelector(".menuToggle");
+  const navigation = document.querySelector(".navigation");
+  menuToggle.classList.toggle("active");
+  navigation.classList.toggle("active");
+  }
 
 function Header(props) {
   return (
@@ -8,7 +22,7 @@ function Header(props) {
         Food <span> . </span>  
       </a>
       
-      <div className="menuToggle" onclick="toggleMenu();">
+      <div className="menuToggle" onClick={toggleMenu}>
       </div>
       <ul className="navigation">
         <li>

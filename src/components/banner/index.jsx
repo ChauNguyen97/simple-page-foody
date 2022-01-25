@@ -1,5 +1,7 @@
+import './banner.css';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 
 function Banner(props) {
   return (
